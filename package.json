@@ -1,0 +1,17 @@
+{
+  "name": "monitron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/monitron.js",
+  "scripts": {
+    "start": "electron . --no-sandbox"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "electron": "^40.6.1",
+    "systeminformation": "^5.31.1"
+  }
+}
