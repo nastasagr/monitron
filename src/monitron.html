@@ -1,18 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+  <head>
+    <link rel="stylesheet" href="./css/monitron.css" />
+  </head>
 
-<head>
-  <link rel="stylesheet" href="./css/monitron.css">
-</head>
+  <body>
+    <div class="widget">
+      <div class="rows">
+        <!-- cpu model -->
 
-<body>
-  <div class="widget">
-    <div class="stat">CPU: <span id="cpu">0%</span></div>
-    <div class="stat">RAM: <span id="ram">0%</span></div>
-    <div class="stat">CPU Model: <span id="model"></span></div>
-  </div>
+        <div class="stat">
+          <div class="left">
+            <div class="icon cpu"></div>
+            <div class="lbl">CPU Model</div>
+          </div>
 
-  <script src="stats.js"></script>
-</body>
+          <div class="value">
+            <span id="model"></span>
+          </div>
+        </div>
 
+        <!-- cpu usage row -->
+        <div class="stat">
+          <div class="left">
+            <div class="icon cpu"></div>
+            <div class="lbl">CPU Usage</div>
+          </div>
+
+          <div class="value">
+            <span id="cpu">0%</span>
+          </div>
+        </div>
+
+        <!-- ram usage row  -->
+
+        <div class="stat">
+          <div class="left">
+            <div class="icon ram"></div>
+            <div class="lbl">RAM Usage</div>
+          </div>
+
+          <div class="value">
+            <span id="ram">%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="stats.js"></script>
+  </body>
 </html>
