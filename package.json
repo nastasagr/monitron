@@ -1,7 +1,7 @@
 {
   "name": "monitron",
   "version": "1.0.0",
-  "description": "",
+  "description": "System monitor widget for linux like rainmeter.",
   "main": "src/monitron.js",
   "scripts": {
     "start": "electron . --no-sandbox"
