@@ -1,5 +1,18 @@
+const { shell } = require("electron");
 const si = require("systeminformation");
 
+const github = document.getElementById("github");
+
+/**
+ *   Project Repository
+ */
+github.addEventListener("click", () => {
+  shell.openExternal("https://github.com/nastasagr/monitron");
+});
+
+/**
+ *   Updatable Callback
+ */
 async function updateStats() {
   const cpuLoad = await si.currentLoad();
   const mem = await si.mem();
