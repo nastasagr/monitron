@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Onder';
+    src: url('fonts/Onder-Regular.woff2') format('woff2'),
+        url('fonts/Onder-Regular.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
