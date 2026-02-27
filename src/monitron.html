@@ -3,63 +3,42 @@
 
 <head>
   <link rel="stylesheet" href="./css/monitron.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-  <div class="widget">
-
-
-    <!-- top header  -->
-    <div class="header">
-      <div class="name">monitron</div>
-
-      <div id="github" class="github"></div>
+<body class="monitron w-full h-full flex items-center justify-center p-10">
+  <div
+    class="w-full relative rounded-2xl backdrop-blur-xl bg-black/90 border border-white/10 shadow-2xl p-6 text-white">
+    <!-- cpu header -->
+    <div class="items-center justify-between mb-4 flex flex-row">
+      <div class="flex flex-row justify-center items-center gap-2">
+        <div class="cpu"></div>
+        <div class="font-semibold">Proccesor</div>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="text-sm text-gray-300" id="cpu">%</span>
+        <div class="w-12 h-4 bg-white/10 rounded overflow-hidden">
+          <div class="h-full w-[26%] bg-white/60"></div>
+        </div>
+      </div>
     </div>
 
+    <div class="border-t border-white/10 my-4"></div>
 
-    <div class="rows">
-      <!-- cpu model -->
-
-      <div class="stat">
-        <div class="left">
-          <div class="icon cpu"></div>
-          <div class="lbl">CPU Model</div>
-        </div>
-
-        <div class="value">
-          <span id="model"></span>
-        </div>
+    <!-- cpu stats -->
+    <div class="grid grid-cols-2 gap-4 text-sm mb-6 text-white">
+      <div>
+        <p class="text-gray-400">Model</p>
+        <p class="mt-1 font-medium" id="model"></p>
       </div>
 
-      <!-- cpu usage row -->
-      <div class="stat">
-        <div class="left">
-          <div class="icon cpu"></div>
-          <div class="lbl">CPU Usage</div>
-        </div>
-
-        <div class="value">
-          <span id="cpu">0%</span>
-        </div>
+      <div>
+        <p class="text-gray-400">Cores</p>
+        <p class="mt-1 font-medium" id="cores"></p>
       </div>
-
-      <!-- ram usage row  -->
-
-      <div class="stat">
-        <div class="left">
-          <div class="icon ram"></div>
-          <div class="lbl">RAM Usage</div>
-        </div>
-
-        <div class="value">
-          <span id="ram">%</span>
-        </div>
-      </div>
-
-
-
 
     </div>
+
   </div>
 
   <script src="stats.js"></script>

@@ -2,13 +2,13 @@ const { app, BrowserWindow } = require("electron");
 const path = require("path");
 
 function createWindow() {
+
   const win = new BrowserWindow({
-    width: 310,
+    width: 450,
     height: "auto",
     frame: false,
     transparent: true,
     backgroundColor: "#00000000",
-
     alwaysOnTop: true,
     maximizable: false,
     webPreferences: {
