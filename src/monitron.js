@@ -1,8 +1,9 @@
 const { app, BrowserWindow } = require("electron");
 const path = require("path");
 
-function createWindow() {
 
+
+function createWindow() {
   const win = new BrowserWindow({
     width: 450,
     height: "auto",
@@ -11,6 +12,7 @@ function createWindow() {
     backgroundColor: "#00000000",
     alwaysOnTop: true,
     maximizable: false,
+    skipTaskbar: true,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
@@ -18,6 +20,12 @@ function createWindow() {
   });
   win.setIgnoreMouseEvents(false);
   win.loadFile(path.join(__dirname, "monitron.html"));
+  win.setVisibleOnAllWorkspaces(true);
+  win.setAlwaysOnTop(true, "screen-saver");
 }
+
+
+app.commandLine.appendSwitch("no-sandbox");
+app.commandLine.appendSwitch("disable-setuid-sandbox");
 
 app.whenReady().then(createWindow);

@@ -13,22 +13,21 @@
     <div class="items-center justify-between mb-4 flex flex-row">
       <div class="flex flex-row justify-center items-center gap-2">
         <div class="cpu"></div>
-        <div class="font-semibold">Proccesor</div>
+        <div class="font-semibold">CPU</div>
       </div>
       <div class="flex items-center gap-3">
         <span class="text-sm text-gray-300" id="cpu">%</span>
         <div class="w-12 h-4 bg-white/10 rounded overflow-hidden">
-          <div class="h-full w-[26%] bg-white/60"></div>
+          <div class="h-full transition-all bg-white" id="cpuBar"></div>
         </div>
       </div>
     </div>
 
-    <div class="border-t border-white/10 my-4"></div>
 
     <!-- cpu stats -->
     <div class="grid grid-cols-2 gap-4 text-sm mb-6 text-white">
       <div>
-        <p class="text-gray-400">Model</p>
+        <p class="text-gray-400">Model Name</p>
         <p class="mt-1 font-medium" id="model"></p>
       </div>
 
@@ -36,10 +35,52 @@
         <p class="text-gray-400">Cores</p>
         <p class="mt-1 font-medium" id="cores"></p>
       </div>
-
     </div>
 
+
+    <!-- cpu header -->
+    <div class="items-center justify-between mb-4 flex flex-row">
+      <div class="flex flex-row justify-center items-center gap-2">
+        <div class="ram"></div>
+        <div class="font-semibold">Memory</div>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="text-sm text-gray-300" id="memUsed">%</span>
+        <div class="w-12 h-4 bg-white/10 rounded overflow-hidden">
+          <div class="h-full transition-all bg-white" id="ramBar"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- memory stats -->
+    <div class="grid grid-cols-3 gap-4 text-sm mb-6 text-white">
+      <div>
+        <p class="text-gray-400">Total</p>
+        <p class="mt-1 font-medium" id="ramTotal"></p>
+      </div>
+
+      <div>
+        <p class="text-gray-400">Used</p>
+        <p class="mt-1 font-medium" id="ramUsed"></p>
+      </div>
+
+
+      <div>
+        <p class="text-gray-400">Free</p>
+        <p class="mt-1 font-medium" id="ramFree"></p>
+      </div>
+    </div>
+
+
+
+
+
+
   </div>
+
+
+
 
   <script src="stats.js"></script>
 </body>

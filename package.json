@@ -4,14 +4,27 @@
   "description": "System monitor widget for linux like rainmeter.",
   "main": "src/monitron.js",
   "scripts": {
-    "start": "electron . --no-sandbox"
+    "start": "electron . --no-sandbox",
+    "dist": "electron-builder"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "electron": "^40.6.1",
     "systeminformation": "^5.31.1"
+  },
+  "build": {
+    "appId": "com.nastasagr.monitron",
+    "productName": "Monitron",
+    "linux": {
+      "target": "AppImage",
+      "category": "Utility",
+      "icon": "build/icons"
+    }
+  },
+  "devDependencies": {
+    "electron": "^40.6.1",
+    "electron-builder": "^26.8.1"
   }
 }
